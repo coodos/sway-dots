@@ -1,0 +1,142 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: VictorMono Nerd Font;
+    font-weight: 600;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #12131a;
+    color: white;
+}
+
+#workspaces {
+	background-color: #1d202e;
+	margin: 5px;
+	margin-left: 6px;
+	border-radius: 5px;
+}
+#workspaces button {
+    padding: 2px 8px;
+    color: #fff;
+}
+
+#workspaces button.focused {
+    color: #24283b;
+    background-color: #7aa2f7;
+    border-radius: 5px;
+}
+
+#workspaces button:hover {
+	background-color: #7dcfff;
+	color: #24283b;
+	border-radius: 5px;
+}
+
+#custom-date, #clock, #battery, #pulseaudio, #network {
+	background-color: #1d202e;
+	padding: 2px 10px;
+	margin: 5px 0px;
+}
+
+#custom-date {
+	color: #7dcfff;
+}
+
+#custom-power {
+	color: #24283b;
+	background-color: #db4b4b;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	padding: 3px 10px;
+}
+
+#clock {
+    color: #b48ead;
+    border-radius: 0px 5px 5px 0px;
+    margin-right: 6px;
+}
+
+#battery {
+    color: #9ece6a;
+}
+
+#battery.charging {
+    color: #9ece6a;
+}
+
+#battery.warning:not(.charging) {
+    background-color: #f7768e;
+    color: #24283b;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#network {
+	color: #f7768e;
+	border-radius: 5px 0px 0px 5px;
+}
+
+#pulseaudio {
+	color: #e0af68;
+}
+
+#temperature {
+  background-color: #24283b;
+  margin: 5px 0;
+  padding: 0 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #82e4ff;
+}
+
+#disk {
+  color: #b9f27c;
+  margin: 5px 0;
+  padding-right: 10px;
+  background-color: #24283b;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 3px;
+}
+
+#memory {
+  margin-left: 5px;
+  background: #2a3152;
+  margin: 5px 0;
+  padding: 0 10px;
+  margin-left: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #FF9E64;
+}
+
+#cpu {
+  margin: 5px 0;
+  padding: 0 10px;
+  background-color: #2a3152;
+  color: #ff7a93;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-right: 6px;
+}
+
+#tray {
+	background-color: #455085;
+	margin: 5px;
+  margin-left: 0px;
+  margin-right: 6px;
+	border-radius: 5px;
+  padding: 0 10px;
+}
+
+#tray > * {
+  padding: 0 2px;
+  margin: 0 2px;
+}
+
+
