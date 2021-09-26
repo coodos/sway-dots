@@ -58,6 +58,11 @@ alias Btw="pfetch | lolcat"
 alias c="clear"
 alias modsway="nvim ~/.config/sway/config"
 alias gentoo-btw="neofetch --ascii_distro gentoo | sed 's/Arch Linux/Gentoo/' | sed 's/-arch1-/-gentoo1-/' | sed 's/pacman/emerge/' | sed 's/arch-btw/gentoo-btw/'"
+alias mv="mv -i"
+alias cp="cp -i"
+alias rm="rm -i"
+alias windoze="virsh start win100"
+alias macOS="virsh start BigSur"
 
 # aliases for devour
 alias vid="devour mpv"
@@ -136,4 +141,3 @@ function fish_prompt
 end
 
 set -U fish_key_bindings fish_default_key_bindings
-
