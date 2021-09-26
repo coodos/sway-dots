@@ -16,10 +16,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'jparise/vim-graphql'
 Plug 'tomasiser/vim-code-dark'
-Plug 'zeekay/vim-beautify'
-Plug 'vim-autoformat/vim-autoformat'
 Plug 'caenrique/nvim-toggle-terminal'
 Plug 'jiangmiao/auto-pairs'
 Plug 'luochen1990/rainbow'
@@ -28,7 +25,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'sickill/vim-monokai'
-Plug 'sbdchd/neoformat'
 Plug 'mattn/emmet-vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
@@ -36,9 +32,16 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
   \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+Plug 'neovim/node-host', { 'do': 'npm install' }
+Plug 'billyvg/tigris.nvim', { 'do': './install.sh' }
+
 
 call plug#end()
 
@@ -105,6 +108,9 @@ inoremap <silent><expr> <Tab>
 " ----------------------------------------------------------------------------------------------------
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" enable neovim tigris
+let g:tigris#enabled = 1
 
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
@@ -202,4 +208,4 @@ let g:nvim_tree_icons = {
     \ }
 
 set termguicolors " this variable must be enabled for colors to be applied properly
-
+set nofoldenable

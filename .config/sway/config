@@ -233,13 +233,13 @@ set $mon-secondary HDMI-A-1
 
 workspace 1 output $mon-primary
 workspace 3 output $mon-primary
-workspace 4 output $mon-primary
 workspace 5 output $mon-primary
 workspace 6 output $mon-primary
 workspace 9 output $mon-primary
 workspace 10 output $mon-primary
 
 workspace 2 output $mon-secondary
+workspace 4 output $mon-secondary
 workspace 7 output $mon-secondary
 workspace 8 output $mon-secondary
 
