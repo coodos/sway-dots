@@ -63,6 +63,7 @@ alias cp="cp -i"
 alias rm="rm -i"
 alias windoze="virsh start win100"
 alias macOS="virsh start BigSur"
+alias obscam="sudo modprobe v4l2loopback devices=1 video_nr=10 card_label=\"OBS Cam\" exclusive_caps=1"
 
 # aliases for devour
 alias vid="devour mpv"

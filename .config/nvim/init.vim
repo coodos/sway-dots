@@ -5,16 +5,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'cseelus/vim-colors-lucid'
 Plug 'kyoz/purify'
 " Plug 'ryanoasis/vim-devicons'
-Plug 'vim-python/python-syntax'
 Plug 'ghifarit53/tokyonight-vim'
 " Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'yuezk/vim-js'
+Plug 'HerringtonDarkholme/yats.vim'
+" or Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim'
 Plug 'ap/vim-css-color'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tomasiser/vim-code-dark'
 Plug 'caenrique/nvim-toggle-terminal'
@@ -98,7 +96,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
 
-let g:python_highlight_all = 1
+let g:jsx_ext_required = 1
 
 inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
@@ -108,9 +106,6 @@ inoremap <silent><expr> <Tab>
 " ----------------------------------------------------------------------------------------------------
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-
-" enable neovim tigris
-let g:tigris#enabled = 1
 
 " when running at every change you may want to disable quickfix
 let g:prettier#quickfix_enabled = 0
@@ -206,6 +201,9 @@ let g:nvim_tree_icons = {
     \     'error': "",
     \   }
     \ }
+
+let g:vim_jsx_pretty_colorful_config = 1 " default 0
+
 
 set termguicolors " this variable must be enabled for colors to be applied properly
 set nofoldenable
