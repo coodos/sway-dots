@@ -1,4 +1,5 @@
 # Autostart
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec udiskie
 exec mako
 exec ~/.azotebg
